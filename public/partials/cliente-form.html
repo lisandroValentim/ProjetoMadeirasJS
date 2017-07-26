@@ -1,0 +1,52 @@
+<div class="container">
+  <h2>{{vm.titulo}}</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="nome" class="col-sm-2 control-label">Nome</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="vm.cliente.nome" id="nome">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cpf_cnpj" class="col-sm-2 control-label">CPF/CNPJ</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="vm.cliente.cpf_cnpj" id="cpf_cnpj">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rg_inscr_est" class="col-sm-2 control-label">RG/Inscrição Estadual</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="vm.cliente.rg_inscr_est" id="rg_inscr_est">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="vm.cliente.email" id="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="endereco" class="col-sm-2 control-label">Endereço</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="vm.cliente.endereco" id="endereco">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cidade" class="col-sm-2 control-label">Cidade</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="vm.cliente.cidade" id="cidade">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="telefone" class="col-sm-2 control-label">Telefone</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="vm.cliente.telefone" id="telefone">
+      </div>
+    </div>
+    <div class="text-right col-sm-10">
+      <a href="#/clientes" class="btn btn-danger">Cancelar</a>
+      <button ng-click="vm.salvar()" type="button" class="btn btn-success btn-lg">Salvar</button>
+    </div>
+  </form>
+</div>
+<!-- /.container -->

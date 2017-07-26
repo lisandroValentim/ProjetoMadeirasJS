@@ -1,0 +1,18 @@
+{
+  "name": "projetomadeirajs",
+  "version": "0.0.1",
+  "description": "Projeto Madeiras JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lisandro Bitencourt Valentim",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "consign": "^0.1.4",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.6"
+  }
+}
