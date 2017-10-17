@@ -45,6 +45,21 @@
         controller: 'ProdutoFormController',
         controllerAs: 'vm'
       })
+      .when('/pedidos', {
+        templateUrl: 'partials/pedido-list.html',
+        controller: 'PedidoListController',
+        controllerAs: 'vm'
+      })
+      .when('/pedidos/new', {
+        templateUrl: 'partials/pedido-form.html',
+        controller: 'PedidoFormController',
+        controllerAs: 'vm'
+      })
+      .when('/pedidos/:id', {
+        templateUrl: 'partials/pedido-form.html',
+        controller: 'PedidoFormController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }  
 })();

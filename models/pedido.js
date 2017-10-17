@@ -17,13 +17,27 @@ var modelo = new Schema({
   },
   forma_pagto: String,
   condicao_pagto: String,
-  cliente: String,
+  cliente: { type: Schema.Types.ObjectId, required: true, ref: 'clientes' },
   valor_total: Number,
   desconto: Number,
   origem_venda: String, //(Atacado/Varejo)
   tipo_operacao: String, //(Venda direta/Interestadual)
   tipo_venda: String, //(Tipo 1/Tipo 2)
-  itens: [itemSchema]
+  itens: { type: Schema.Types.ObjectId, ref: 'pedido_itens' }
 });
+
+modelo.pre('save', function (next) {
+  var pedido = this;
+  var anoAtual = new Date().getFullYear();
+  if (pedido.isNew) {
+    generateSequence('pedido', anoAtual)
+      .then(function (sequencia) {
+        pedido['numero'] = sequencia;
+        next();
+      });
+  } else {
+    next()
+  }
+})
 
 mongoose.model('pedidos', modelo);
