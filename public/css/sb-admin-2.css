@@ -12,7 +12,7 @@ body {
 }
 #page-wrapper {
   padding: 0 15px;
-  min-height: 300px;
+  min-height: 900px;
   background-color: white;
 }
 @media (min-width: 768px) {
@@ -22,6 +22,12 @@ body {
     padding: 0 30px;
     border-left: 1px solid #e7e7e7;
   }
+}
+.scroll {
+  width:1650px;
+  height:170px;
+  background-color:#F2F2F2;
+  overflow:auto;
 }
 .navbar-top-links {
   margin-right: 0;
@@ -68,14 +74,7 @@ body {
   right: 0;
   left: auto;
 }
-.navbar-static-side {
-  height: 90%; 
-  overflow-y: auto; 
-  position: fixed; 
-  margin-top:51px; 
-  width:250px; 
-  z-index: 1; 
-}
+
 .sidebar .sidebar-nav.navbar-collapse {
   padding-left: 0;
   padding-right: 0;
